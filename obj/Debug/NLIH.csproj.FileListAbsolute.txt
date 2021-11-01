@@ -77,3 +77,6 @@ F:\Projects\NLIH\obj\Debug\NLIH.Migrations.AddFinanceTableWithRelationship.resou
 F:\Projects\NLIH\obj\Debug\NLIH.Migrations.AddAdminTableWithRelationship.resources
 F:\Projects\NLIH\obj\Debug\NLIH.Migrations.AddTreatmentTableWithRelationship.resources
 F:\Projects\NLIH\obj\Debug\NLIH.Migrations.AddTimeTableWithRelationships.resources
+F:\Projects\NLIH\obj\Debug\NLIH.Migrations.AddGuestToContext.resources
+F:\Projects\NLIH\obj\Debug\NLIH.Migrations.GuestPasswordAnnotations.resources
+F:\Projects\NLIH\obj\Debug\NLIH.Migrations.PopulateGuestWithAdmin.resources

@@ -1,0 +1,36 @@
+﻿@model IEnumerable<NLIH.Models.Guest>
+
+@{ 
+    ViewBag.Title = "Guests";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Guests</h2>
+
+@if(!Model.Any())
+            {
+                <p>We do not have any Guest yet.</p>
+}
+else
+            {
+                <table class=" table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Address</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var guest in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.ActionLink(guest.Name, "Details", "Guests", new { id = guest.Id }, null)
+                                </td>
+                                <td>@guest.Address</td>
+                            </tr>
+
+                        }
+                    </tbody>
+                </table>
+            }

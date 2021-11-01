@@ -127,7 +127,9 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\GuestsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -203,6 +205,18 @@
     <Compile Include="Migrations\202110161127197_AddTimeTableWithRelationships.designer.cs">
       <DependentUpon>202110161127197_AddTimeTableWithRelationships.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202110231710224_AddGuestToContext.cs" />
+    <Compile Include="Migrations\202110231710224_AddGuestToContext.designer.cs">
+      <DependentUpon>202110231710224_AddGuestToContext.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110281733283_GuestPasswordAnnotations.cs" />
+    <Compile Include="Migrations\202110281733283_GuestPasswordAnnotations.designer.cs">
+      <DependentUpon>202110281733283_GuestPasswordAnnotations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110281758220_PopulateGuestWithAdmin.cs" />
+    <Compile Include="Migrations\202110281758220_PopulateGuestWithAdmin.designer.cs">
+      <DependentUpon>202110281758220_PopulateGuestWithAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Accounts.cs" />
     <Compile Include="Models\Admin.cs" />
@@ -220,6 +234,7 @@
     <Compile Include="Models\UserType.cs" />
     <Compile Include="NLHIDbContenxt.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\GuestViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -257,9 +272,12 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Guests\Index.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Guest\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -328,6 +346,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202110161127197_AddTimeTableWithRelationships.resx">
       <DependentUpon>202110161127197_AddTimeTableWithRelationships.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110231710224_AddGuestToContext.resx">
+      <DependentUpon>202110231710224_AddGuestToContext.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110281733283_GuestPasswordAnnotations.resx">
+      <DependentUpon>202110281733283_GuestPasswordAnnotations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110281758220_PopulateGuestWithAdmin.resx">
+      <DependentUpon>202110281758220_PopulateGuestWithAdmin.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

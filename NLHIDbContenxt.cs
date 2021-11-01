@@ -23,6 +23,7 @@ namespace NLIH
         public DbSet<User> Users { get; set; }
         public DbSet<Treatment> Treatments { get; set; }
         public DbSet<TimeTable> TimeTables { get; set; }
+        public DbSet<Guest> Guests { get; set; }
 
 
 
