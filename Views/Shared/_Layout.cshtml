@@ -6,6 +6,50 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+
+    <style>
+        .dropbtn {
+            background-color: rgba(0,0,0,0.2);
+            color: #ddd;
+            padding: 16px;
+            font-size: 14px;
+            border: none;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #ddd;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+
+                .dropdown-content a:hover {
+                    background-color: #ddd;
+                }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: black;
+        }
+    </style>
+
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -21,10 +65,31 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Departments/Facilities", "Index","Departments")</li>
+                    <li>@Html.ActionLink("Departments/Facilities", "Index", "Departments")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+
+                    <li>@Html.ActionLink("User Profile", "Details", "Guest")</li>
+                    <li>@Html.ActionLink("Patient Info", "Index", "Patient")</li>
+                    <li>@Html.ActionLink("Doctors Info", "Index", "Doctor")</li>
+                    <li>@Html.ActionLink("Appointment Info", "Index", "TimeTable")</li>
                 </ul>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Admin Section</button>
+                    <div class="dropdown-content">
+                        <a href="#">User management</a>
+                        <a href="#">Patient management</a>
+                        <a href="#">Staff management</a>
+                        <a href="#">Department/Ward management</a>
+                        <a href="#">Treatment management</a>
+                        <a href="#">Nurse management</a>
+                        <a href="#">Outpatient Service</a>
+                        <a href="#">In-Patient Service</a>
+                    </div>
+                </div>
+
+                @Html.Partial("_LoginPartial")
             </div>
         </div>
     </div>
