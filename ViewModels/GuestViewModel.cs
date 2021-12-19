@@ -8,7 +8,7 @@ namespace NLIH.ViewModels
 {
     public class GuestViewModel
     {
-        public User User { get; set; }
+        public IEnumerable<UserType>  UserType { get; set; }
         public Guest Guest { get; set; }
     }
 }

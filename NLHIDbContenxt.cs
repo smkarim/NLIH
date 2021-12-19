@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Data.Entity;
+using System.ComponentModel.DataAnnotations.Schema;
 
 
 
@@ -24,7 +25,7 @@ namespace NLIH
         public DbSet<Treatment> Treatments { get; set; }
         public DbSet<TimeTable> TimeTables { get; set; }
         public DbSet<Guest> Guests { get; set; }
-
+        public DbSet<Customer> Customers { get; set; }
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -95,6 +96,15 @@ namespace NLIH
                 .MapInheritedProperties()
                 .ToTable("Admin");
             });
+
+            modelBuilder.Entity<Customer>().Map(m =>
+            {
+                m
+                .MapInheritedProperties()
+                .ToTable("Customer");
+            });
+
+            modelBuilder.Entity<User>().Property(a => a.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
 
         }// */
 

@@ -18,24 +18,28 @@ namespace NLIH.Controllers
         }
 
         [HttpPost]
-        public ActionResult Authorize(Guest guestModel)
+        public ActionResult Authorize(Customer customerModel)
         {
-            var guestDetails = _context.Guests.Where(g => g.Username == guestModel.Username && g.Password == guestModel.Password).FirstOrDefault();
+            var customerDetails = _context.Customers.Where(g => g.Username == customerModel.Username && g.Password == customerModel.Password).FirstOrDefault();
 
-            if(guestDetails == null)
+            if(customerDetails == null)
             {
                 string noResult = "Wrong user name or password";
                 ViewBag.Message = noResult;
-                return View("Index",guestDetails);
+                return View("Index", customerDetails);
             }
             else
             {
-                Session["userId"] = guestDetails.Id;
-                Session["userName"] = guestDetails.Username;
+                Session["userId"] = customerDetails.Id;
+                Session["userName"] = customerDetails.Username;
                 return RedirectToAction("Index", "Home");
             }
         }
 
+        
+        
+
+       
 
 
     }

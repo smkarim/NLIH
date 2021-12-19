@@ -79,4 +79,7 @@ F:\Projects\NLIH\obj\Debug\NLIH.Migrations.AddTreatmentTableWithRelationship.res
 F:\Projects\NLIH\obj\Debug\NLIH.Migrations.AddTimeTableWithRelationships.resources
 F:\Projects\NLIH\obj\Debug\NLIH.Migrations.AddGuestToContext.resources
 F:\Projects\NLIH\obj\Debug\NLIH.Migrations.GuestPasswordAnnotations.resources
-F:\Projects\NLIH\obj\Debug\NLIH.Migrations.PopulateGuestWithAdmin.resources
+F:\Projects\NLIH\obj\Debug\NLIH.Migrations.AddIdentitytoUserID.resources
+F:\Projects\NLIH\obj\Debug\NLIH.Migrations.NewAddition.resources
+F:\Projects\NLIH\obj\Debug\NLIH.Migrations.UserTypeIdtoGuest.resources
+F:\Projects\NLIH\obj\Debug\NLIH.Migrations.AddCustomerTable.resources
