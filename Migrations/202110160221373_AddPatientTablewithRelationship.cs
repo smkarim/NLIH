@@ -11,7 +11,7 @@
                 "dbo.Patient",
                 c => new
                     {
-                        Id = c.Int(nullable: false),
+                        Id = c.Int(nullable: false, identity: true),
                         UserType_Id = c.Byte(),
                         Name = c.String(),
                         Address = c.String(),

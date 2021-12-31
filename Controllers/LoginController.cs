@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using NLIH.Models;
+using System.Web.Security;
 
 namespace NLIH.Controllers
 {
@@ -30,10 +31,18 @@ namespace NLIH.Controllers
             }
             else
             {
+                FormsAuthentication.SetAuthCookie(customerModel.Username,false);
                 Session["userId"] = customerDetails.Id;
                 Session["userName"] = customerDetails.Username;
                 return RedirectToAction("Index", "Home");
             }
+        }
+
+        public ActionResult LogOut()
+        {
+            FormsAuthentication.SignOut();
+            //return RedirectToAction("Index", "Home");
+            return RedirectToAction("Index", "Login");
         }
 
         

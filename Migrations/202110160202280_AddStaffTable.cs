@@ -11,7 +11,7 @@
                 "dbo.Staff",
                 c => new
                     {
-                        Id = c.Int(nullable: false),
+                        Id = c.Int(nullable: false, identity: true),
                         Name = c.String(),
                         Address = c.String(),
                         DateOfBirth = c.DateTime(nullable: false),
