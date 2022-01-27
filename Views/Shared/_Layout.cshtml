@@ -74,7 +74,7 @@
                     @if (User.Identity.IsAuthenticated)
                     {
                         <li>@Html.ActionLink("User Profile", "Details", "Guest")</li>
-                        <li>@Html.ActionLink("Patient Info", "Index", "Patient")</li>
+                        <li>@Html.ActionLink("Patient Info", "Index", "Patients")</li>
                         <li>@Html.ActionLink("Doctors Info", "Index", "Doctor")</li>
                         <li>@Html.ActionLink("Appointment Info", "Index", "TimeTable")</li>
 
@@ -85,7 +85,7 @@
                     <button class="dropbtn">Admin Section</button>
                     <div class="dropdown-content">
                         <a href="#">User management</a>
-                        <a href="#">Patient management</a>
+                        <a href="@Url.Action("New","Patients")" class="elements"><span>Patient management</span></a>
                         <a href="#">Staff management</a>
                         <a href="#">Department/Ward management</a>
                         <a href="#">Treatment management</a>

@@ -26,6 +26,7 @@ namespace NLIH
         public DbSet<TimeTable> TimeTables { get; set; }
         public DbSet<Guest> Guests { get; set; }
         public DbSet<Customer> Customers { get; set; }
+        public DbSet<Patient> Patients { get; set; }
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

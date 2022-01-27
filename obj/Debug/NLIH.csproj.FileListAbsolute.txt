@@ -83,3 +83,4 @@ F:\Projects\NLIH\obj\Debug\NLIH.Migrations.AddIdentitytoUserID.resources
 F:\Projects\NLIH\obj\Debug\NLIH.Migrations.NewAddition.resources
 F:\Projects\NLIH\obj\Debug\NLIH.Migrations.UserTypeIdtoGuest.resources
 F:\Projects\NLIH\obj\Debug\NLIH.Migrations.AddCustomerTable.resources
+F:\Projects\NLIH\obj\Debug\NLIH.Migrations.AddUserTypeIdtoPatient.resources

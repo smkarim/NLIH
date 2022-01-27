@@ -129,6 +129,7 @@
     <Compile Include="Controllers\GuestsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\PatientsController.cs" />
     <Compile Include="Controllers\RegisterController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -229,6 +230,10 @@
     <Compile Include="Migrations\202112161726581_AddCustomerTable.Designer.cs">
       <DependentUpon>202112161726581_AddCustomerTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202201031505575_AddUserTypeIdtoPatient.cs" />
+    <Compile Include="Migrations\202201031505575_AddUserTypeIdtoPatient.Designer.cs">
+      <DependentUpon>202201031505575_AddUserTypeIdtoPatient.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Accounts.cs" />
     <Compile Include="Models\Admin.cs" />
@@ -291,6 +296,8 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Register\Register.cshtml" />
     <Content Include="Views\Register\SignUp.cshtml" />
+    <Content Include="Views\Patients\New.cshtml" />
+    <Content Include="Views\Patients\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -381,6 +388,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202112161726581_AddCustomerTable.resx">
       <DependentUpon>202112161726581_AddCustomerTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202201031505575_AddUserTypeIdtoPatient.resx">
+      <DependentUpon>202201031505575_AddUserTypeIdtoPatient.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
